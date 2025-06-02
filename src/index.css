@@ -1,0 +1,99 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer base {
+      :root {
+        --background: 20 14.3% 97.3%; /* Light Gray */
+        --foreground: 20 14.3% 4.1%; /* Dark Gray */
+
+        --card: 0 0% 100%; /* White */
+        --card-foreground: 20 14.3% 4.1%; /* Dark Gray */
+
+        --popover: 0 0% 100%; /* White */
+        --popover-foreground: 20 14.3% 4.1%; /* Dark Gray */
+
+        --primary: 24.6 95% 53.1%; /* Orange */
+        --primary-foreground: 60 9.1% 97.8%; /* Almost White */
+
+        --secondary: 60 4.8% 95.9%; /* Light Grayish Blue */
+        --secondary-foreground: 24 9.8% 10%; /* Dark Blue */
+
+        --muted: 60 4.8% 95.9%; /* Light Grayish Blue */
+        --muted-foreground: 25 5.3% 44.7%; /* Medium Gray */
+
+        --accent: 60 4.8% 95.9%; /* Light Grayish Blue */
+        --accent-foreground: 24 9.8% 10%; /* Dark Blue */
+
+        --destructive: 0 84.2% 60.2%; /* Red */
+        --destructive-foreground: 60 9.1% 97.8%; /* Almost White */
+
+        --border: 20 5.9% 90%; /* Light Gray Border */
+        --input: 20 5.9% 90%; /* Light Gray Input */
+        --ring: 24.6 95% 53.1%; /* Orange Ring */
+
+        --radius: 0.5rem;
+      }
+
+      .dark {
+        --background: 222.2 84% 4.9%; /* Dark Blue */
+        --foreground: 210 40% 98%; /* Almost White */
+
+        --card: 222.2 84% 4.9%; /* Dark Blue */
+        --card-foreground: 210 40% 98%; /* Almost White */
+
+        --popover: 222.2 84% 4.9%; /* Dark Blue */
+        --popover-foreground: 210 40% 98%; /* Almost White */
+
+        --primary: 210 40% 98%; /* Almost White */
+        --primary-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+
+        --secondary: 217.2 32.6% 17.5%; /* Darker Blue */
+        --secondary-foreground: 210 40% 98%; /* Almost White */
+
+        --muted: 217.2 32.6% 17.5%; /* Darker Blue */
+        --muted-foreground: 215 20.2% 65.1%; /* Lighter Gray */
+
+        --accent: 217.2 32.6% 17.5%; /* Darker Blue */
+        --accent-foreground: 210 40% 98%; /* Almost White */
+
+        --destructive: 0 62.8% 30.6%; /* Dark Red */
+        --destructive-foreground: 210 40% 98%; /* Almost White */
+
+        --border: 217.2 32.6% 17.5%; /* Darker Blue Border */
+        --input: 217.2 32.6% 17.5%; /* Darker Blue Input */
+        --ring: 215 20.2% 65.1%; /* Lighter Gray Ring */
+      }
+    }
+
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      body {
+        @apply bg-background text-foreground;
+        transition-property: background-color, color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+    }
+
+    /* Custom scrollbar for a more modern look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: hsl(var(--muted));
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary));
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--primary) / 0.8);
+    }
