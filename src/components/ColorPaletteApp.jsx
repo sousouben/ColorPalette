@@ -518,10 +518,7 @@ const ColorPaletteApp = () => {
       />
 
       <footer className="text-center mt-12 text-muted-foreground text-sm">
-        <p>
-          &copy; {new Date().getFullYear()} Color Palette par wpdevdesigns.
-          Généré le {new Date().toLocaleString()}.
-        </p>
+        <p>&copy; {new Date().getFullYear()} Color Palette par wpdevdesigns.</p>
       </footer>
     </div>
   );
